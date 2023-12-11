@@ -37,7 +37,7 @@ body{
     width: 100%;
     background: #26242D;
     flex-shrink: 0;
-    padding: 1em .5em;
+    padding: 1em 1.5em;
     display: flex;
     align-items: center;
 }
@@ -67,4 +67,7 @@ body{
     padding: .4em 1.5em;
     overflow-y: auto;
     padding-top: 1.7em;
+}
+.sf-nav-container ul{
+    margin-bottom: 30px;
 }
