@@ -1,0 +1,44 @@
+.min-heading{
+    font-size: .99em;
+    opacity: .6;
+    letter-spacing: .8px;
+}
+.tab-mini{
+    height: 34px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .99em;
+    padding: 1em 0;
+    margin: 15px 0;
+    font-weight: 500;
+    letter-spacing: .4px;
+    
+}
+.icon{
+    height: 24px;
+    width: 24px;
+}
+.sf-home-items .icon, .header-tab .icon{
+    margin-right: 8px;
+}
+.header-tab{
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.1em;
+    padding: 1.5em 0 ;
+    margin: 15px 0;
+    font-weight: 500;
+    letter-spacing: .8px;
+}
+.header-tab h1{
+    font-size: .99em;
+}
+.header-tab .icon{
+    height: 40px;
+    width: 60px;
+    object-fit: contain;
+    margin-right: 0px;
+}
