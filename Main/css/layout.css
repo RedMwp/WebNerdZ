@@ -10,32 +10,37 @@
     margin:0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    border:none;
+    outline: none;
 }
 body{
     color:#EEE9EE;
-    background: #1F1C20;
+    background: #121212;
     margin: 0 auto;
     font-size: 16px;
 }
 .sf-container{
     width: 100%;
-    max-width: 1440px;
+    max-width: 1540px;
+    height:100sdvh;
     height: 100vh;
     overflow: hidden;
     display: flex;
+    margin: 0 auto;
 }
 .sf-nav-container{
     width: 25%;
     max-width: 170px;
-    background: #26242D;
+    background:#171717;
     height: 100%;
     display: flex;
     flex-direction: column;
+    border-right:1px solid;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 .sf-logo-container{
     height: 50px;
     width: 100%;
-    background: #26242D;
     flex-shrink: 0;
     padding: 1em 1.5em;
     display: flex;
@@ -53,14 +58,22 @@ body{
 .sf-main-content-container{
     width: 70%;
     height: 100%;
-    background:#1F1C20;
+    background:#121212;
     display: flex;
     flex: 1;
+    position: relative;
 }
+/*=== nav bar in content===*/
 .sf-content-nav{
     height: 50px;
-    width: 100%;
-    background: none;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 0 2%;
+    right: 0;
+    top: 1px;
 }
 .sf-home-items{
     height: 100%;
@@ -70,4 +83,45 @@ body{
 }
 .sf-nav-container ul{
     margin-bottom: 30px;
+}
+.sf-main-nav-content li{
+    transition:   .3s ease-in-out;
+    border-radius: 8px;
+}
+.sf-main-nav-content li:hover, .sf-main-nav-content li:focus{
+    border-left:1px solid #3A31B4;
+    border-right:1px solid #3A31B4;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+/*=== main content bodybstyles=== */
+#sf-main-content{
+    height: 100%;
+    width: 100%;
+    padding: 20px 2%;
+}
+@media (max-width: 750px){
+    #main-menu-btn{
+        display: block;
+    }
+    .sf-container{
+        position: relative;
+    }
+    .sf-nav-container{
+        width:90%;
+        max-width: 270px;
+        position: fixed;
+        left:-100%;
+        top:0;
+        z-index: 200;
+        transition: all .4s ease-in-out;
+        opacity:0;
+    }
+    .active{
+        left:0;
+        opacity: 1;
+    }
+    .sf-content-nav{
+        width: 100%;
+    }
 }
